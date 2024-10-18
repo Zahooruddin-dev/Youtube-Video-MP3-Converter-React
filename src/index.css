@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    height: 100vh;
+    background-color: #0D3B66;
+    background-image: linear-gradient(135deg, #0D3B66 0%, #1B262C 100%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    overflow-x: hidden;
+}
+
+/* Root container with max-width to control overall width */
+#root {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.logo {
+    height: 6em;
+    padding: 1.5em;
+    transition: transform 300ms ease, filter 300ms ease;
+    cursor: pointer;
+}
+.logo:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 1em #38A1DB);
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.content {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for contrast */
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 800px;
+    width: 100%;
+    margin-top: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.content_title {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    color: #FFCC70;
+}
+
+.content_description {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: #F0F0F0;
+}
+
+/* Form Styling */
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.form_input {
+    width: 100%;
+    max-width: 500px;
+    padding: 0.75rem;
+    border: 2px solid #38A1DB;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    transition: border-color 0.3s ease;
+}
+.form_input:focus {
+    border-color: #0D3B66;
+}
+
+.form_button {
+    width: 150px;
+    padding: 0.75rem 1rem;
+    background: linear-gradient(90deg, #38A1DB, #0D3B66);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+.form_button:hover {
+    background: linear-gradient(90deg, #3282B8, #0D3B66);
+    transform: translateY(-2px);
+}
+
+.download_btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.75rem 2rem;
+    background: linear-gradient(45deg, #0D3B66, #38A1DB);
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background 300ms ease, transform 300ms ease;
+}
+.download_btn:hover {
+    background: linear-gradient(45deg, #3282B8, #1B262C);
+    transform: translateY(-3px);
+}
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .content_title {
+        font-size: 2.5rem;
+    }
+
+    .content_description {
+        font-size: 1.1rem;
+    }
+
+    .form_input {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        padding: 0 0.5rem;
+    }
+
+    .content {
+        padding: 1.5rem;
+    }
+
+    .content_title {
+        font-size: 2rem;
+    }
+
+    .content_description {
+        font-size: 1rem;
+    }
+
+    .form_button {
+        width: 120px;
+        padding: 0.5rem;
+    }
+
+    .download_btn {
+        padding: 0.5rem 1.5rem;
+    }
+}
